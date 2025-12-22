@@ -7,6 +7,8 @@
     <meta name="description" content="SimpleFlow Appsの公式ウェブサイトです。Androidアプリの開発・運営を行っています。">
     <meta name="google-site-verification" content="uzgvcb3bELy7gBYTRzoglr5ovK8c68upmpFKeSqahS0" />
 
+    <link rel="icon" href="SimpleFlow_icon.png" type="image/png">
+
     <style>
         /* --- 基本設定 (編集不要) --- */
         :root {
@@ -30,14 +32,23 @@
         header {
             background: var(--white);
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            padding: 1rem 2rem;
+            padding: 0.5rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary-color); }
-        nav ul { display: flex; gap: 20px; }
-        nav a:hover { color: var(--primary-color); }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 60px;
+            width: auto;
+            border-radius: 50%;
+        }
+
+        nav ul { display: flex; gap: 20px;}
+        nav a:hover {color: var(--primary-color);}
 
         /* --- ヒーローセクション（トップの目立つ部分） --- */
         .hero {
@@ -133,7 +144,10 @@
 <body>
 
     <header>
-        <div class="logo">SimpleFlow Apps</div>
+        <a href="#" class="logo">
+            <img src="SimpleFlow_icon.jpg" alt="SimpleFlow Apps">
+        </a>
+
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
@@ -231,6 +245,5 @@
     </footer>
 
 </body>
-
 </html>
 
