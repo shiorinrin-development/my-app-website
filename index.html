@@ -155,15 +155,16 @@
         .app-icon {
             width: 80px;
             height: 80px;
-            background-color: #f0f0f0;
             border-radius: 22%;
             margin: 0 auto 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            color: #aaa;
+            display: block;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
+        .app-card:hover .app-icon {
+            transform: scale(1.05);
+        }
+
         .store-btn {
             display: inline-block;
             background-color: var(--primary-color);
@@ -301,7 +302,7 @@
         <div class="app-grid">
 
             <div class="app-card">
-                <div class="app-icon">Icon</div>
+                <img src="stockmanager_icon.png" alt="おうちストック アイコン" class="app-icon">
                 <h3>[おうちストック]</h3>
                 <p> 日用品の「買い忘れ」や「二重買い」をなくし、毎日の買い物をスマートにする在庫管理アプリ。</p>
                 <a href="https://play.google.com/store/apps/details?id=com.simpleflowapps.stockmanagerapp" class="store-btn" target="_blank">Google Playで手に入れる</a>
