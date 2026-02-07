@@ -13,8 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <style>
-        /* --- 基本設定 (編集不要) --- */
+        /* --- 基本設定 --- */
         :root {
+            --header-bg-blue: #17366e; /*ロゴ画像の背景色に近い色を定義*/
             --primary-color: #2563eb; /* メインカラー（青） */
             --text-color: #333;
             --bg-color: #f9fafb;
@@ -34,7 +35,7 @@
 
         /* --- ヘッダー --- */
         header {
-            background: #1e3a8a;
+            background: var(--header-bg-blue);
             color: white;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
             padding: 0.5rem 2rem;
@@ -45,33 +46,34 @@
             top: 0;
             z-index: 100;
         }
+
         .logo { 
             display: flex; 
             align-items: center; 
         }
+
         .logo img {
-            height: 70px;
+            height: 50px;
             width: auto;
-            border-radius: 50%;
-            border: 2px solid rgba(255,255,255,0.9);
             transition: transform 0.3s ease;
+            vertical-align: middle;
         }
 
         .logo img:hover {
             transform: scale(1.05);
         }
 
-        nav ul { display: flex; gap: 20px;}
+        nav ul { display: flex; gap: 30px;}
 
         nav a {
-            font-size: 1rem; 
+            font-size: 0.95rem; 
             font-weight: 500;
             color: #e0e7ff;
             transition: color 0.3s; 
         }
         nav a:hover {
-            color: #ffffff;
-            text-shadow: 0 0 8px rgba(255,255,255,0.5);
+            color: var(--white);
+            text-shadow: 0 0 8px rgba(255,255,255,0.3);
         }
 
         /* --- ヒーローセクション --- */
@@ -79,41 +81,38 @@
             position: relative;
             text-align: center;
             padding: 8rem 1rem;
-            background: linear-gradient(135deg, #f0f4ff 0%, #f9fafb 100%);
+            background: linear-gradient(180deg, var(--header-bg-blue) 0%, #102a54 100%);
+            color: white;  /*var whiteか？*/
             overflow: hidden;
             z-index: 1;
         }
-        .hero::before {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 500px;
-            height: 500px;
-            background-image: url('SimpleFlow_icon.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            opacity: 0.06;
-            z-index: -1;
-            pointer-events: none;
+
+        .hero-logo-large {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 1rem;
+            filter: brightness(0) invert(1);
+            opacity: 0.9;
         }
+
         .hero h1 {
             font-family: "Montserrat", sans-serif;
             font-size: 3.5rem;
+            margin: 0;
             margin-bottom: 1.5rem;
             letter-spacing: 0.05rem;
-            color: #111;
+            color: #ffffff; /*var whiteか？*/
             font-weight: 700;
             line-height: 1.2;    
         }
         .hero p { 
             font-family: "Noto Sans JP", sans-serif;
             font-size: 1.1rem; 
-            color: #444;  
+            color: #e0e7ff;  
             font-weight: 400;
             letter-spacing: 0.1rem;
+            max-width: 600px;
+            margin: 0 auto;
     }
 
         /* --- コンテンツ共通 --- */
@@ -234,7 +233,6 @@
             margin-top: 5rem;
             font-size: 0.9rem;
         }
-
         .social-links {
             margin-bottom: 2rem;
             display: flex;
@@ -249,7 +247,7 @@
             height: 40px;
             border-radius: 50%;
             background-color: #222;
-            color: #fff;
+            color: #fff; /*var whiteにできない？*/
             transition: all 0.3s ease;
         }
         .social-icon svg {
@@ -272,10 +270,6 @@
             }
             .hero { padding: 5rem 1rem;}
             .hero h1 { font-size: 2.2rem; }
-            .hero::before {
-                width: 300px;
-                height: 300px;
-            }
             section { padding: 3rem 1.5rem; }
         }
     </style>
@@ -284,7 +278,7 @@
 
     <header>
         <a href="#" class="logo">
-            <img src="SimpleFlow_icon.png" alt="SimpleFlow Apps">
+            <img src="header_logo.png" alt="SimpleFlow Apps">
         </a>
 
         <nav>
@@ -297,8 +291,9 @@
     </header>
 
     <div class="hero">
-        <h1>Uncomplicate Your Life.</h1>
-        <p>シンプルな発想で、毎日を少し豊かに。</p>
+        <img src="SimpleFlow_icon.png" alt="SimpleFlow Logo" class="hero-logo-large">
+        <h1>SimpleFlow Apps</h1>
+        <p>Uncomplicate Your Life.<br>シンプルな発想で、毎日を少し豊かに。</p>
     </div>
 
     <section id="about">
@@ -328,7 +323,6 @@
     <section id="apps">
         <h2>Applications</h2>
         <div class="app-grid">
-
             <div class="app-card">
                 <img src="stockmanager_icon.png" alt="おうちストック アイコン" class="app-icon">
                 <h3>[おうちストック]</h3>
