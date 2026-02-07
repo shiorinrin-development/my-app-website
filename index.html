@@ -94,9 +94,9 @@
         .hero {
             position: relative;
             text-align: center;
-            padding: 8rem 1rem;
-            background: linear-gradient(180deg, var(--header-bg-blue) 0%, #102a54 100%);
-            color: var(--white);
+            padding: 0 0 5rem 0; /* 下はテキストのために余白を作る */
+            background: var(--bg-color);
+            color: var(--text-color);
             overflow: hidden;
             z-index: 1;
         }
@@ -104,18 +104,19 @@
         .hero-logo-large {
             width: 100%;
             height: auto;
-            margin-bottom: 2rem;
-            opacity: 1;
+            margin-bottom: 3rem;
+            display: block;
         }
 
         .hero p { 
             font-family: "Noto Sans JP", sans-serif;
             font-size: 1.1rem; 
-            color: var(--text-light-bulue);  
+            color: var(--text-color);  
             font-weight: 400;
             letter-spacing: 0.1rem;
             max-width: 600px;
             margin: 0 auto;
+            padding: 0 1rem;
     }
 
         /* --- コンテンツ共通 --- */
@@ -271,8 +272,7 @@
                 gap: 1rem; 
                 padding: 1rem; 
             }
-            .hero { padding: 5rem 1rem;}
-            .hero-logo-large { max-width: 80%;}
+            .hero { padding: 0 0 3rem 0;}
             section { padding: 3rem 1.5rem; }
         }
     </style>
