@@ -67,7 +67,7 @@
         }
 
         .logo img {
-            height: 50px;
+            height: 40px;
             width: auto;
             transition: transform 0.3s ease;
             vertical-align: middle;
@@ -102,23 +102,13 @@
         }
 
         .hero-logo-large {
-            width: 120px;
-            height: 120px;
-            margin-bottom: 1rem;
-            filter: brightness(0) invert(1);
-            opacity: 0.9;
+            width: 100%;
+            max-width: 500px; /* 最大幅を制限し、PCで巨大になりすぎないように */
+            height: auto;
+            margin-bottom: 2rem;
+            opacity: 1;
         }
 
-        .hero h1 {
-            font-family: "Montserrat", sans-serif;
-            font-size: 3.5rem;
-            margin: 0;
-            margin-bottom: 1.5rem;
-            letter-spacing: 0.05rem;
-            color: ver(--white);
-            font-weight: 700;
-            line-height: 1.2;    
-        }
         .hero p { 
             font-family: "Noto Sans JP", sans-serif;
             font-size: 1.1rem; 
@@ -283,7 +273,7 @@
                 padding: 1rem; 
             }
             .hero { padding: 5rem 1rem;}
-            .hero h1 { font-size: 2.2rem; }
+            .hero-logo-large { max-width: 80%;}
             section { padding: 3rem 1.5rem; }
         }
     </style>
@@ -305,8 +295,7 @@
     </header>
 
     <div class="hero">
-        <img src="SimpleFlow_icon.png" alt="SimpleFlow Logo" class="hero-logo-large">
-        <h1>SimpleFlow Apps</h1>
+        <img src="header_logo.png" alt="SimpleFlow Apps Logo" class="hero-logo-large">
         <p>Uncomplicate Your Life.<br>シンプルな発想で、毎日を少し豊かに。</p>
     </div>
 
