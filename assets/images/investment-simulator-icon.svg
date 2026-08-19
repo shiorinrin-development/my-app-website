@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">積立投資シミュレータ</title>
+  <rect width="64" height="64" rx="14" fill="#2563eb"/>
+  <path d="M14 48h38" fill="none" stroke="#bfdbfe" stroke-linecap="round" stroke-width="4"/>
+  <path d="m15 43 10-11 9 6 15-19" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+  <path d="M43 19h6v6" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+</svg>
