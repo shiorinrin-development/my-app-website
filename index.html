@@ -16,15 +16,15 @@
     <meta property="og:title" content="SimpleFlow Apps | 暮らしと未来を整えるアプリ">
     <meta property="og:description" content="SimpleFlow Appsは、Androidアプリ「おうちストック」とWebアプリ「積立投資シミュレータ」を企画・開発・運営しています。">
     <meta property="og:url" content="https://simpleflowapps.com/">
-    <meta property="og:image" content="https://simpleflowapps.com/Logo_transparent.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="530">
-    <meta property="og:image:height" content="438">
+    <meta property="og:image" content="https://simpleflowapps.com/assets/images/og-image.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="SimpleFlow Apps">
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="SimpleFlow Apps | 暮らしと未来を整えるアプリ">
     <meta name="twitter:description" content="SimpleFlow Appsは、Androidアプリ「おうちストック」とWebアプリ「積立投資シミュレータ」を企画・開発・運営しています。">
-    <meta name="twitter:image" content="https://simpleflowapps.com/Logo_transparent.png">
+    <meta name="twitter:image" content="https://simpleflowapps.com/assets/images/og-image.jpg">
     <meta name="twitter:image:alt" content="SimpleFlow Apps">
 
     <link rel="icon" href="/favicon.ico" sizes="any">
@@ -49,8 +49,8 @@
                     "logo": {
                         "@type": "ImageObject",
                         "url": "https://simpleflowapps.com/SimpleFlow_icon.png",
-                        "width": 2048,
-                        "height": 2048
+                        "width": 512,
+                        "height": 512
                     },
                     "description": "暮らしと未来の見通しを整える、シンプルで直感的なアプリケーションを企画・開発・運営しています。",
                     "email": "contact@simpleflowapps.com",
@@ -82,7 +82,7 @@
     <header class="site-header">
         <div class="site-header__inner">
             <a href="/" class="brand" aria-label="SimpleFlow Apps ホーム">
-                <img src="Logo_transparent.png" alt="" class="brand__mark" width="530" height="438">
+                <img src="Logo_transparent.png" alt="" class="brand__mark" width="256" height="211">
                 <span class="brand__name">SimpleFlow Apps</span>
             </a>
 
@@ -101,11 +101,12 @@
     <main id="main-content">
         <section class="hero" aria-labelledby="hero-title">
             <img
-                src="header_logo.png"
+                src="assets/images/header-logo.jpg"
                 alt=""
                 class="hero__image"
                 width="1584"
                 height="672"
+                fetchpriority="high"
             >
             <div class="hero__content">
                 <p class="eyebrow">Uncomplicate Your Life.</p>
@@ -156,8 +157,10 @@
                                 src="stockmanager_icon.png"
                                 alt=""
                                 class="app-card__icon"
-                                width="2048"
-                                height="2048"
+                                width="384"
+                                height="384"
+                                loading="lazy"
+                                decoding="async"
                             >
                             <span class="app-card__type">Mobile App</span>
                         </div>
@@ -189,6 +192,8 @@
                                 class="app-card__icon"
                                 width="64"
                                 height="64"
+                                loading="lazy"
+                                decoding="async"
                             >
                             <span class="app-card__type">Web App</span>
                         </div>
