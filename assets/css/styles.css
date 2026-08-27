@@ -415,12 +415,6 @@ a.button:hover {
     transform: translateY(-2px);
 }
 
-.button--pending {
-    color: #657085;
-    background: #e8ecf2;
-    cursor: not-allowed;
-}
-
 .operator-card,
 .text-panel {
     background: var(--surface);
