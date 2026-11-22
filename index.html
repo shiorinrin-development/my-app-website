@@ -100,10 +100,11 @@
                 <span class="brand__name">SimpleFlow Apps</span>
             </a>
 
-            <nav class="site-nav" aria-label="メインナビゲーション">
+            <nav class="site-nav site-nav--home" aria-label="メインナビゲーション">
                 <ul>
                     <li><a href="#about">Philosophy</a></li>
-                    <li><a href="#apps">Applications</a></li>
+                    <li><a href="#monteflow">MonteFlow</a></li>
+                    <li><a href="#apps">Mobile Apps</a></li>
                     <li><a href="#operator">Operator</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="privacy/">Privacy</a></li>
@@ -154,13 +155,52 @@
             </div>
         </section>
 
+        <section id="monteflow" class="section monteflow" aria-labelledby="monteflow-title">
+            <div class="monteflow__intro">
+                <p class="section-heading__label">積立投資シミュレーター</p>
+                <h2 id="monteflow-title">MonteFlow</h2>
+                <p>毎月の積立額や運用期間を変えながら、将来の資産額を試算できます。モンテカルロ法で値動きを含めると、同じ想定年利でも結果がどのくらい広がるかを確認できます。</p>
+                <div class="monteflow__actions">
+                    <a
+                        class="button"
+                        href="https://simulator.simpleflowapps.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        シミュレーターを開く <span aria-hidden="true">↗</span>
+                    </a>
+                    <a href="https://simulator.simpleflowapps.com/guide/">使い方と結果の読み方</a>
+                </div>
+            </div>
+
+            <figure class="monteflow__example">
+                <figcaption>
+                    <h3>毎月3万円を20年間積み立てたら？</h3>
+                    <p>初期投資10万円・想定年利5%・月末積立。元本は730万円です。</p>
+                </figcaption>
+                <dl class="monteflow__results">
+                    <div class="monteflow__fixed">
+                        <dt>値動きなし</dt>
+                        <dd><strong>約1,244万円</strong></dd>
+                    </div>
+                    <div class="monteflow__range">
+                        <dt>値動きあり <small>中央約80%（P10〜P90）</small></dt>
+                        <dd><strong>約671〜1,968万円</strong></dd>
+                    </div>
+                </dl>
+                <div class="monteflow__scale" aria-hidden="true"><span>0</span><span>1,100</span><span>2,200万円</span></div>
+                <p>値動きを含めた試算では、約1割の結果が671万円を下回りました。元本730万円を下回るケースもあります。</p>
+                <small>正規分布・対数収益率モデル。年率ボラティリティ15%、1万回試行、seedは <code>monteflow-example</code>。結果は設定条件に基づく試算です。</small>
+            </figure>
+        </section>
+
         <section id="apps" class="section-shell section-shell--soft" aria-labelledby="apps-title">
             <div class="section">
                 <div class="section-heading">
-                    <p class="section-heading__label">Applications</p>
-                    <h2 id="apps-title">暮らしと未来を整えるアプリ。</h2>
+                    <p class="section-heading__label">Mobile Apps</p>
+                    <h2 id="apps-title">暮らしを支えるモバイルアプリ。</h2>
                     <p class="section-heading__description">
-                        日々の在庫管理や献立づくり、習慣の記録から、将来の資産形成のシミュレーションまで。毎日の選択と積み重ねを、シンプルなアプリで支えます。
+                        日用品の在庫管理、献立づくり、習慣の記録に使えるAndroidアプリです。
                     </p>
                 </div>
 
@@ -260,39 +300,6 @@
                             </ul>
                         </div>
                     </article>
-
-                    <article class="app-card">
-                        <div class="app-card__header">
-                            <img
-                                src="assets/images/investment-simulator-icon.svg"
-                                alt=""
-                                class="app-card__icon"
-                                width="64"
-                                height="64"
-                                loading="lazy"
-                                decoding="async"
-                            >
-                            <span class="app-card__type">Web App</span>
-                        </div>
-                        <div class="app-card__body">
-                            <p class="app-card__platform">Web Browser</p>
-                            <h3>MonteFlow</h3>
-                            <p>
-                                毎月の積立と複利による資産推移を、価格変動の有無や複数のシナリオで試算できるWebアプリです。
-                            </p>
-                        </div>
-                        <div class="app-card__footer">
-                            <a
-                                href="https://simulator.simpleflowapps.com/"
-                                class="button"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Webアプリを開く
-                                <span aria-hidden="true">↗</span>
-                            </a>
-                        </div>
-                    </article>
                 </div>
             </div>
         </section>
@@ -370,7 +377,8 @@
             </div>
 
             <div class="site-footer__links">
-                <a href="#apps">Applications</a>
+                <a href="#monteflow">MonteFlow</a>
+                <a href="#apps">Mobile Apps</a>
                 <a href="operator/">Operator</a>
                 <a href="#contact">Contact</a>
                 <a href="privacy/">Privacy</a>

@@ -325,9 +325,123 @@ a:focus-visible,
     content: "";
 }
 
+.monteflow {
+    display: grid;
+    grid-template-columns: minmax(0, 4fr) minmax(0, 5fr);
+    align-items: center;
+    gap: clamp(2rem, 5vw, 4rem);
+    border-top: 1px solid var(--border);
+}
+
+.monteflow__intro h2 {
+    margin: 0.35rem 0 0.75rem;
+    color: var(--brand-blue-deep);
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: clamp(2.1rem, 5vw, 3.5rem);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 1.15;
+}
+
+.monteflow__intro > p:not(.section-heading__label),
+.monteflow__example p,
+.monteflow__example small {
+    color: var(--text-secondary);
+    overflow-wrap: anywhere;
+}
+
+.monteflow__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.7rem 1.1rem;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.monteflow__actions a:not(.button) {
+    color: var(--brand-blue);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+.monteflow__example {
+    margin: 0;
+    padding: clamp(1rem, 4vw, 2.25rem);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: var(--surface-soft);
+}
+
+.monteflow__example h3 {
+    margin: 0;
+    color: var(--brand-blue-deep);
+    font-size: clamp(1.12rem, 2.8vw, 1.5rem);
+    line-height: 1.5;
+}
+
+.monteflow__example p {
+    margin: 0.5rem 0;
+}
+
+.monteflow__results {
+    display: grid;
+    gap: 0.9rem;
+    margin: 1.25rem 0 0;
+}
+
+.monteflow__results > div {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: baseline;
+    gap: 0.4rem 0.65rem;
+}
+
+.monteflow__results small {
+    display: block;
+}
+
+.monteflow__results dd {
+    margin: 0;
+    color: var(--brand-blue-deep);
+    font-variant-numeric: tabular-nums;
+}
+
+.monteflow__results > div::after {
+    grid-column: 1 / -1;
+    height: 0.65rem;
+    border-radius: 999px;
+    background: var(--border);
+    content: "";
+}
+
+.monteflow__results .monteflow__fixed::after {
+    background-image: linear-gradient(to right, var(--brand-blue) 56.55%, transparent 56.55%);
+}
+
+.monteflow__results .monteflow__range::after {
+    background-image: linear-gradient(to right, transparent 30.5%, var(--action-blue) 30.5% 89.45%, transparent 89.45%);
+}
+
+.monteflow__scale {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+}
+
+.monteflow__scale span:nth-child(2) {
+    text-align: center;
+}
+
+.monteflow__scale span:last-child {
+    text-align: right;
+}
+
 .app-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: clamp(1.5rem, 4vw, 2.5rem);
 }
 
@@ -977,8 +1091,9 @@ a.button:hover {
         grid-template-columns: 1fr;
     }
 
+    .monteflow,
     .app-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
     }
 
     .app-card {
@@ -1012,6 +1127,15 @@ a.button:hover {
         width: 100%;
         min-width: 0;
         gap: 0.5rem;
+    }
+
+    .site-nav--home {
+        overflow-x: auto;
+    }
+
+    .site-nav--home ul {
+        width: max-content;
+        min-width: 100%;
     }
 
     .hero {
