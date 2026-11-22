@@ -173,13 +173,6 @@ a:focus-visible,
     white-space: nowrap;
 }
 
-.hero {
-    position: relative;
-    padding: 0 0 5.5rem;
-    overflow: hidden;
-    background: var(--surface-soft);
-}
-
 .hero__image {
     display: block;
     width: 100%;
@@ -188,19 +181,6 @@ a:focus-visible,
     object-position: center;
 }
 
-.hero__content {
-    position: relative;
-    width: min(calc(100% - 3rem), 820px);
-    margin: -4rem auto 0;
-    padding: clamp(2rem, 5vw, 4rem);
-    text-align: center;
-    background: rgba(255, 255, 255, 0.97);
-    border: 1px solid rgba(223, 229, 239, 0.9);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-}
-
-.eyebrow,
 .section-heading__label,
 .app-card__platform {
     margin: 0;
@@ -210,26 +190,18 @@ a:focus-visible,
     letter-spacing: 0.16em;
 }
 
-.eyebrow,
 .section-heading__label {
     text-transform: uppercase;
 }
 
 .hero h1 {
-    margin: 1rem 0 1.25rem;
+    margin: 0.65rem 0 0;
     color: var(--brand-blue-deep);
     font-family: "Noto Sans JP", sans-serif;
-    font-size: clamp(2rem, 5vw, 3.75rem);
+    font-size: clamp(1.875rem, 5vw, 3.75rem);
     font-weight: 600;
     letter-spacing: 0.04em;
     line-height: 1.35;
-}
-
-.hero__lead {
-    margin: 0;
-    color: var(--text-secondary);
-    font-family: "Noto Sans JP", sans-serif;
-    font-size: clamp(0.95rem, 2vw, 1.08rem);
 }
 
 .no-break {
@@ -260,8 +232,13 @@ a:focus-visible,
     text-align: center;
 }
 
-.section-heading h2,
-.contact-card h2 {
+.hero__content {
+    width: calc(100% - 2rem);
+    margin-bottom: 0;
+    padding-top: clamp(3rem, 6vw, 5rem);
+}
+
+.section-heading h2 {
     margin: 0.65rem 0 0;
     color: var(--brand-blue-deep);
     font-family: "Noto Sans JP", sans-serif;
@@ -689,42 +666,27 @@ a.button:hover {
     margin: 0;
 }
 
-.contact-card {
-    padding: clamp(2rem, 6vw, 4rem);
-    text-align: center;
-    color: var(--surface);
-    background: linear-gradient(145deg, var(--brand-blue-deep), var(--brand-blue));
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
+.contact .section-heading {
+    margin-bottom: 0;
 }
 
-.contact-card .section-heading__label {
-    color: #9fc1ff;
-}
-
-.contact-card h2 {
-    color: var(--surface);
-}
-
-.contact-card > p:not(.section-heading__label) {
-    margin: 1rem 0 0;
-    color: #dbe7ff;
+.contact .section-heading h2,
+.contact .section-heading__description {
+    color: inherit;
 }
 
 .contact-email {
     display: inline-block;
     margin-top: 1.5rem;
-    color: var(--surface);
     font-size: clamp(1rem, 3vw, 1.25rem);
     font-weight: 600;
     text-decoration: underline;
-    text-decoration-color: #7ba8ff;
     text-underline-offset: 0.35rem;
     overflow-wrap: anywhere;
 }
 
 .contact-email:hover {
-    text-decoration-color: var(--surface);
+    text-decoration-thickness: 2px;
 }
 
 .text-panel {
@@ -1136,16 +1098,6 @@ a.button:hover {
     .site-nav--home ul {
         width: max-content;
         min-width: 100%;
-    }
-
-    .hero {
-        padding-bottom: 4rem;
-    }
-
-    .hero__content {
-        width: min(calc(100% - 2rem), 820px);
-        margin-top: -2rem;
-        border-radius: var(--radius-md);
     }
 
     .desktop-only {
