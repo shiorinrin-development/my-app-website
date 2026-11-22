@@ -303,10 +303,6 @@ a:focus-visible,
 }
 
 .monteflow {
-    display: grid;
-    grid-template-columns: minmax(0, 4fr) minmax(0, 5fr);
-    align-items: center;
-    gap: clamp(2rem, 5vw, 4rem);
     border-top: 1px solid var(--border);
 }
 
@@ -343,11 +339,9 @@ a:focus-visible,
 }
 
 .monteflow__example {
-    margin: 0;
-    padding: clamp(1rem, 4vw, 2.25rem);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    background: var(--surface-soft);
+    margin: clamp(2.25rem, 5vw, 3.5rem) 0 0;
+    padding-top: clamp(1.5rem, 3vw, 2.25rem);
+    border-top: 1px solid var(--border);
 }
 
 .monteflow__example h3 {
@@ -1053,7 +1047,6 @@ a.button:hover {
         grid-template-columns: 1fr;
     }
 
-    .monteflow,
     .app-grid {
         grid-template-columns: minmax(0, 1fr);
     }
